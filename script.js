@@ -13,7 +13,7 @@ const config = {
         default: 'arcade',
         arcade: {
             gravity: { y: 300 },
-            debug: true // Modo de depuração (mostra os corpos físicos)
+            debug: false // Modo de depuração (não mostra os corpos físicos)
         }
     },
 
@@ -37,7 +37,6 @@ var moeda;         // Moeda
 var pontuacao = 0; // Pontuação inicial
 var placar;        // Texto do placar
 var coracao;       // Sprite do coração
-var coracaoSprite; // Array para facilitar o acesso às variáveis do jogo
 
 console.log(variaveisJogo[5]);
 
@@ -132,6 +131,10 @@ function update() {
         alien.y = 200;
         alien.x = larguraJogo / 2;
         tirarCoracao();
+    }
+
+    if (coracao.visible<3) {
+        game.scene.start();
     }
 }
 
