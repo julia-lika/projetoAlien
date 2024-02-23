@@ -133,7 +133,7 @@ function update() {
         tirarCoracao();
     }
 
-    if (coracao.visible<3) {
+    if (coracao.visible < 3) {
         game.scene.start();
     }
 }
