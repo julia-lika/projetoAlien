@@ -88,8 +88,8 @@ function create() {
         var posicaoMoeda_Y = Phaser.Math.RND.between(50, 650);
         moeda.setPosition(posicaoMoeda_Y, 100);
 
-        pontuacao += 1; // Soma pontuação
         placar.setText('Moedas:' + pontuacao); // Atualiza o texto do placar
+        pontuacao += 1; // Soma pontuação
 
         moeda.setVisible(true); // Torna a moeda visível novamente
     });
